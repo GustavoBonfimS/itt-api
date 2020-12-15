@@ -1,4 +1,6 @@
 import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 import path from 'path';
 import cors from 'cors';
 import morgan from 'morgan';
@@ -18,5 +20,5 @@ app.use(errorHandler);
 
 const port = process.env.PORT || 3333;
 app.listen(port, () => {
-    console.log(`api executando na porta ${port}`);
+  console.log(`api executando na porta ${port}`);
 });
