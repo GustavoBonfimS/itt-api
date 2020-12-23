@@ -1,5 +1,6 @@
-export default class {
+export default class Image {
     originalName: string;
     path?: string;
-    text: string
+    text: string;
+    url?: string;
 }

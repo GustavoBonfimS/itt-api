@@ -8,6 +8,6 @@ const upload = multer(uploadConfig);
 
 // routes.get('/orphanages/:id', OrphanagesController.show);
 // routes.get('/orphanages', OrphanagesController.index);
-routes.post('/image', upload.array('images') , ImageController.index);
+routes.post('/images', upload.array('images') , ImageController.index);
 
 export default routes;

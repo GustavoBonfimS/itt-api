@@ -5,7 +5,7 @@ import ImageView from '../views/image_view';
 import path from 'path';
 
 export default {
-  async index(req: Request, res: Response) {
+  async index(req: Request, res: Response): Promise<void> {
     const requestImages = req.files as Express.Multer.File[];
     const images = requestImages.map(image => {
       return {
