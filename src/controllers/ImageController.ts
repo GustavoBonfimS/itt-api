@@ -6,6 +6,7 @@ import path from 'path';
 
 export default {
   async index(req: Request, res: Response): Promise<void> {
+    const { lang } = req.body;
     const requestImages = req.files as Express.Multer.File[];
     const images = requestImages.map(image => {
       return {
@@ -15,8 +16,7 @@ export default {
     });
     await recognize(
       path.join(__dirname, '..', '..', 'uploads', images[0].path),
-      'eng',
-      { logger: m => console.log(m) }
+      lang
     ).then(({ data: { text } }) => {
       const image: Image = {
         originalName: images[0].originalName,
