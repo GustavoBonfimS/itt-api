@@ -2,7 +2,7 @@
 Convert text within images to plain text, send the image to the Endpoint in a formData and get the text back within the image.
 
 Using Tesseract OCR in node with Express
-it iw
+
 # Usage
 **at the moment  this API dosen't support array of images because the Tesseract is difficult to recognize array of images, if you want that, do by yourself and send a pull request :)**
 
